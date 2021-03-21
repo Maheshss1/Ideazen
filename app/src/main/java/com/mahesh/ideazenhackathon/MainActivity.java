@@ -34,6 +34,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.mahesh.ideazenhackathon.model.User;
 import com.mahesh.ideazenhackathon.support.Constants;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 2363;
@@ -108,13 +110,14 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                                             if(error != null){
+                                                Log.d(TAG, "onEvent: "+error);
                                                 Toast.makeText(MainActivity.this, "Error!", Toast.LENGTH_SHORT).show();
                                                 return;
                                             }
 
-                                            DocumentSnapshot documentSnapshot = value.getDocuments().get(0);
-                                            User u1 = documentSnapshot.toObject(User.class);
-                                            if(u1 == null || !u1.getEmail().equals(user.getEmail())){
+                                            List<DocumentSnapshot> documentSnapshots = value.getDocuments();
+
+                                            if(documentSnapshots.size()<=0){
                                                 User u = new User(user.getUid(), user.getPhotoUrl().toString(), user.getDisplayName(), user.getEmail(), user.getPhoneNumber());
                                                 firestore.collection(Constants.USER_COLLECTION)
                                                         .add(u)
@@ -129,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
 
                                                     }
                                                 });
+                                            }else{
+                                                Toast.makeText(MainActivity.this, "New Member", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
