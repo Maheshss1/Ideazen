@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "713759030175",
+    "project_id": "ideazen-hackathon",
+    "storage_bucket": "ideazen-hackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713759030175:android:ec1358a36f9daebcf71baa",
+        "android_client_info": {
+          "package_name": "com.mahesh.ideazenhackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713759030175-rcttngns0l9o5adeum1bcib586h9mr7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mahesh.ideazenhackathon",
+            "certificate_hash": "f44b426213354fca5bb6dbef0259ea5a370c44b6"
+          }
+        },
+        {
+          "client_id": "713759030175-dbckbsmkqqmsfoaiqam0ckt1gdenln17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZBgSW9b_FYb1BfveQSAFJii0JLrIdHDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713759030175-dbckbsmkqqmsfoaiqam0ckt1gdenln17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

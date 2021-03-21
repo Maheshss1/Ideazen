@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    tools:context=".AddProject">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#44FFFFFF"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Create Project"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/project_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Project Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/project_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Project Domain"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/software_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Software Used"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/algorithme_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Algorithm Used"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+        <AutoCompleteTextView
+            android:id="@+id/reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Reference Taken From"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:text="Difficulty :" />
+
+
+        <RadioGroup
+            android:id="@+id/difficult_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/low_diff_radio_button"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/low_diff_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/low_difficult_green"
+                android:buttonTint="@android:color/black"
+                android:padding="7dp"
+                android:text="Low" />
+
+            <RadioButton
+                android:id="@+id/mid_diff_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/medium_difficult_yellow"
+                android:buttonTint="@android:color/black"
+                android:padding="7dp"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/high_diff_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/high_difficult_red"
+                android:buttonTint="@android:color/black"
+                android:padding="7dp"
+                android:text="High" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#77FFFFFF"
+            android:hint="Description, if any"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:padding="@dimen/padding_edittext"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColorHint="@android:color/black" />
+
+        <Button
+            android:id="@+id/create_project_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="#AA31BA32"
+            android:onClick="createProject"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Create Project"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

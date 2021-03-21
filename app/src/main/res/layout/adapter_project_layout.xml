@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:background="@drawable/round_corner"
+    android:backgroundTint="#77dddddd">
+
+    <View
+        android:id="@+id/difficult_level"
+        android:background="#AAF31B2D"
+        android:layout_width="10dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IdeaX"
+                android:ellipsize="marquee"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/project_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="marquee"
+                android:layout_toRightOf="@id/project_name"
+                android:layout_toLeftOf="@id/delete_button"
+                android:layout_alignBaseline="@id/project_name"
+
+                android:inputType="text"
+                tools:text="tollstollstollstollstollstollstollstollstolls"
+                android:text="(By Mahesh Shimpi)" />
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_delete_24"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                 />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/project_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Development"
+            android:textColor="#222" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="marquee"
+            android:maxLines="2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/software_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="#444"
+                android:padding="5dp"
+                android:text="VSCode"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/algorithm_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="#444"
+                android:padding="5dp"
+                android:text="Sorting Algorithm"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/reference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="#444"
+                android:padding="5dp"
+                android:text="Github"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
